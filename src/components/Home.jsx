@@ -83,13 +83,14 @@ export default class HomeComponent extends Component {
     }
 
     render() { 
+        console.log(window.screen.height)
         return(
             <Home>
                 <Centered data-after={afters[this.state.index%afters.length]}> KEENPLIFY </Centered>
                 <YT>
                     <YouTube videoId="pm2U3QznMOg" opts={{
-                        height: window.screen.height+200,
-                        width: window.screen.width+200,
+                        height: window.screen.height,
+                        width: window.screen.width,
                         playerVars: {
                             autoplay: 1,
                             controls: 0,
