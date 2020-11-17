@@ -59,7 +59,7 @@ const YT = styled.div`
     pointer-events: none
 `
 
-const afters = ["Web Developer", "Gamer", "Content Creator"]
+const afters = ["WEB DEVELOPER", "GAME", "CONTENT CREATOR"]
 
 export default class HomeComponent extends Component {
     constructor(props) {
@@ -93,9 +93,9 @@ export default class HomeComponent extends Component {
                         playerVars: {
                             autoplay: 1,
                             controls: 0,
+                            muter: 1,
                             loop: 1,
                             disablekb: 1,
-
                             playlist: "3WslDlXv5U0"
                         },
                     }}/>
