@@ -59,7 +59,7 @@ const YT = styled.div`
     pointer-events: none
 `
 
-const afters = ["WEB DEVELOPER", "GAME", "CONTENT CREATOR"]
+const afters = ["WEB DEVELOPER", "GAMER", "CONTENT CREATOR"]
 
 export default class HomeComponent extends Component {
     constructor(props) {
@@ -87,7 +87,7 @@ export default class HomeComponent extends Component {
             <Home>
                 <Centered data-after={afters[this.state.index%afters.length]}> KEENPLIFY </Centered>
                 <YT>
-                    <YouTube videoId="3WslDlXv5U0" opts={{
+                    <YouTube videoId="pm2U3QznMOg" opts={{
                         height: window.screen.height+200,
                         width: window.screen.width+200,
                         playerVars: {
@@ -96,7 +96,7 @@ export default class HomeComponent extends Component {
                             mute: 1,
                             loop: 1,
                             disablekb: 1,
-                            playlist: "3WslDlXv5U0"
+                            playlist: "pm2U3QznMOg"
                         },
                     }}/>
                 </YT>
