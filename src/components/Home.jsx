@@ -93,7 +93,7 @@ export default class HomeComponent extends Component {
                         playerVars: {
                             autoplay: 1,
                             controls: 0,
-                            muter: 1,
+                            mute: 1,
                             loop: 1,
                             disablekb: 1,
                             playlist: "3WslDlXv5U0"
