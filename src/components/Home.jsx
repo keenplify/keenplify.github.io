@@ -87,7 +87,7 @@ export default class HomeComponent extends Component {
             <Home>
                 <Centered data-after={afters[this.state.index%afters.length]}> KEENPLIFY </Centered>
                 <YT>
-                    <YouTube videoId="x5l_W90ZHPs" opts={{
+                    <YouTube videoId="3WslDlXv5U0" opts={{
                         height: window.screen.height+200,
                         width: window.screen.width+200,
                         playerVars: {
@@ -96,7 +96,7 @@ export default class HomeComponent extends Component {
                             loop: 1,
                             disablekb: 1,
 
-                            playlist: "x5l_W90ZHPs"
+                            playlist: "3WslDlXv5U0"
                         },
                     }}/>
                 </YT>
