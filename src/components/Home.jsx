@@ -82,8 +82,7 @@ export default class HomeComponent extends Component {
         })
     }
 
-    render() { 
-        console.log(window.screen.height)
+    render() {
         return(
             <Home>
                 <Centered data-after={afters[this.state.index%afters.length]}> KEENPLIFY </Centered>
