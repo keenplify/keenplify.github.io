@@ -5,11 +5,11 @@ const Projects = styled.div`
     height: 100vh
 `
 
-export default class ProjectsComponent extends Component {
+export default class ContactComponent extends Component {
     render() {
         return(
             <Projects>
-                Projects coming soon
+                Contacts coming soon
             </Projects>
         )
     }
