@@ -55,7 +55,7 @@ a:hover::after {
 
 .text-transition {
   color: white;
-  position: absolute;
+  position: absolute !important;
   font-size: 2rem;
   white-space: nowrap;
   left: 50%;
