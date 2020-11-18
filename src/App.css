@@ -1,3 +1,16 @@
+:root {
+  --primary: 255, 255, 0;
+}
+
+::-webkit-scrollbar {
+  background: black;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--primary));
+}
+
 body {
   background-color: black;
   color: white;
@@ -5,9 +18,9 @@ body {
 }
 
 a {
-  color: rgba(0, 0, 0, 0) !important;
-  -webkit-text-stroke: 1px yellow;
-  font-size: 3vw;
+  color: rgb(var(--primary)) !important;
+  -webkit-text-stroke: 0px;
+  font-size: 4vw;
   font-weight: 600;
   position: relative;
   transition: 0.25s;
@@ -15,7 +28,7 @@ a {
 }
 
 a:hover {
-  color: yellow !important;
+  color: rgb(var(--primary)) !important;
 }
 
 a:hover::after {
@@ -24,9 +37,9 @@ a:hover::after {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke: 1px yellow;
+  -webkit-text-stroke: 1px rgba(var(--primary), 0.5);
 }
 
 .navbar {
@@ -38,4 +51,53 @@ a:hover::after {
   height: 100vh;
   display: flex;
   position: relative;
+}
+
+.text-transition {
+  color: white;
+  position: absolute;
+  font-size: 2rem;
+  white-space: nowrap;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, 50%);
+  z-index: 2;
+}
+
+.text-transition_inner {
+  white-space: nowrap;
+}
+
+h1 {
+  font-size: 4em;
+  font-style: italic;
+  color: rgb(0, 0, 0, 0);
+  -webkit-text-stroke: 1px rgba(var(--primary), 1);
+}
+p {
+  font-size: 1.2em;
+  text-align: justify;
+  text-indent: 1.5em;
+}
+b {
+  color: rgb(var(--primary));
+}
+
+.fullcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 600px) {
+  a {
+    color: rgba(0, 0, 0, 0) !important;
+    -webkit-text-stroke: 1px rgb(var(--primary));
+    font-size: 3vw;
+  }
+
+  a:hover::after {
+    font-size: 1.5em;
+  }
 }
