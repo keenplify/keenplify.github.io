@@ -1,82 +1,62 @@
+import React, {Component} from 'react'
+import { Container } from 'react-bootstrap'
+import { Route, withRouter } from 'react-router-dom'
+import { AnimatedSwitch } from 'react-router-transition';
+
 import NavigationBar from './components/NavigationBar'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
 import Projects from './components/Projects'
-import { Container } from 'react-bootstrap'
-import { Route, BrowserRouter as Router } from 'react-router-dom'
-import { AnimatedSwitch } from 'react-router-transition';
-import YouTube from 'react-youtube';
-import styled from 'styled-components'
+import YTBG from './components/YTBG'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
-const YT = styled.div`
-    position: fixed;
-    z-index: -1;
-    left: 0;
-    top: -60px;
-    pointer-events: none;
-    overflow: hidden;
-    height: calc(100vh + 120px);
-    width: 100vw;
-    &:before {
-      content: "";
-      z-index: 1;
-      width: 100vw;
-      height: 100vh;
-      position:fixed;
-      top: 0;
-      left: 0;
-      background-color: rgba(0,0,0,0.9)
-    }
+export default withRouter(class App extends Component {
+  
+  constructor(props) {
+    super(props)
 
-    iframe {
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    this.state = {
+      strongoverlay: "0"
     }
-`
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <Router>
-        <NavigationBar />
-        <Container fluid>
-            <AnimatedSwitch
-              atEnter={{ opacity: 0 }}
-              atLeave={{ opacity: 0 }}
-              atActive={{ opacity: 1 }}
-              className="switch-wrapper"
-            >
-              <Route path="/contact" component={Contact} />
-              <Route path="/about" component={About} />
-              <Route path="/projects" component={Projects} />
-              <Route path="*" component={Home} />
-            </AnimatedSwitch>
-        </Container>
-      </Router>
+  componentWillMount() {
+    this.unlisten = this.props.history.listen((location, action) => {
+      console.log(location);
+      this.setState({
+        strongoverlay: (location.pathname === "/") ? ("0"):("1")
+      })
+    });
+  }
+  componentWillUnmount() {
+      this.unlisten();
+  }
+  
+  render() {
     
-      <YT>
-          <YouTube videoId="pm2U3QznMOg" opts={{
-              height: window.screen.height,
-              width: window.screen.width,
-              playerVars: {
-                  autoplay: 1,
-                  controls: 0,
-                  mute: 1,
-                  loop: 1,
-                  disablekb: 1,
-                  playlist: "pm2U3QznMOg"
-              },
-          }}/>
-      </YT>
-    </div>
-  );
-}
-
-export default App;
+    return (
+      <div className="App">
+        
+          <NavigationBar />
+          <Container fluid>
+              <AnimatedSwitch
+                atEnter={{ opacity: 0 }}
+                atLeave={{ opacity: 0 }}
+                atActive={{ opacity: 1 }}
+                className="switch-wrapper"
+              >
+                <Route path="/contact" component={Contact} />
+                <Route path="/about" component={About} />
+                <Route path="/projects" component={Projects} />
+                <Route path="*" component={Home} />
+              </AnimatedSwitch>
+          </Container>
+          
+          <YTBG strongoverlay={this.state.strongoverlay}/>
+      </div>
+    );
+  }
+})

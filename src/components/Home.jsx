@@ -62,6 +62,9 @@ export default class HomeComponent extends Component {
                 <TextTransition
                     text={afters[this.state.index%afters.length]} 
                     inline
+                    style={{
+                        overflow: "hidden"
+                    }}
                 />
             </Home>
         )

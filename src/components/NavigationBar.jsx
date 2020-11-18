@@ -3,21 +3,6 @@ import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const SocMed = styled.div`
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(0, -50%);
-    z-index: 10;
-
-    @media (min-width: 600px) {
-        z-index: 10;
-        bottom: 10%;
-        left: 5%;
-        top: auto;
-        transition: 1s
-    }
-`
 const SocImg = styled.img`
     height: 4vw;
     width: 4vw;
@@ -25,7 +10,8 @@ const SocImg = styled.img`
 `
 
 export default class NavigationBar extends Component {
-    render() {return(
+    render() {
+        return(
         <Navbar fixed="bottom" variant="dark">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="d-flex">
