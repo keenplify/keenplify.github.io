@@ -18,7 +18,7 @@ export default class AboutComponent extends Component {
                         borderWidth: 5,
                         hoverBackgroundColor: "transparent",
                         hoverBorderColor: "rgba(255,255,1)",
-                        data: [25, 40, 50, 25]
+                        data: [25, 40, 50, 25, 0, 0, 0, 40]
                     },
                     {
                         label: "2020",
@@ -27,7 +27,7 @@ export default class AboutComponent extends Component {
                         borderWidth: 5,
                         hoverBackgroundColor: "transparent",
                         hoverBorderColor: "rgba(255,255,1)",
-                        data: [25, 45, 60, 60, 30, 30, 40, 50]
+                        data: [25, 45, 60, 60, 25, 30, 40, 50]
                     },
                 ],
             }
@@ -39,10 +39,10 @@ export default class AboutComponent extends Component {
     }
     render() {
         return(
-            <Container>
+            <Container  style={{marginBottom: "10vh"}}>
                 <Row  className="vh-100 position-relative" id="info">
                     <Col md={7} className="fullcenter">
-                        <h1>WHOS KEENPLIFY</h1>
+                        <h1>WHO'S KEENPLIFY</h1>
                         <p>
                             <b>Aczell Bien Florencio</b> is a fullstack developer from Quezon City, Philippines. Since his childhood, 
                             he had experience with local and cloud icafe solutions, PXE diskless/network boot systems, Windows installation 
@@ -58,8 +58,6 @@ export default class AboutComponent extends Component {
                         <p>(by year as percentage, the higher the better)</p>
                         <Bar 
                             data={this.state.expchart}
-                            width={80}
-                            height={30}
                         />
                     </Col>
                 </Row>

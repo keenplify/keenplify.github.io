@@ -19,7 +19,7 @@ export default withRouter(class App extends Component {
     super(props)
 
     this.state = {
-      strongoverlay: "0"
+      strongoverlay: (window.location.pathname === "/") ? ("0"): ("1")
     }
   }
 
@@ -36,7 +36,6 @@ export default withRouter(class App extends Component {
   }
   
   render() {
-    
     return (
       <div className="App">
         

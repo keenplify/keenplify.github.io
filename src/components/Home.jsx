@@ -30,7 +30,7 @@ const Centered = styled.div`
 `
 
 
-const afters = ["FULLSTACK DEVELOPER", "GAMER", "CONTENT CREATOR"]
+const afters = ["FULLSTACK DEVELOPER", "VISUAL DESIGNER", "CONTENT CREATOR"]
 
 export default class HomeComponent extends Component {
     constructor(props) {
@@ -63,7 +63,8 @@ export default class HomeComponent extends Component {
                     text={afters[this.state.index%afters.length]} 
                     inline
                     style={{
-                        overflow: "hidden"
+                        overflow: "hidden",
+                        fontStretch: "condensed"
                     }}
                 />
             </Home>
