@@ -6,7 +6,6 @@ import { AnimatedSwitch } from 'react-router-transition';
 import NavigationBar from './components/NavigationBar'
 import Home from './components/Home'
 import About from './components/About'
-import Contact from './components/Contact'
 import Projects from './components/Projects'
 import YTBG from './components/YTBG'
 
@@ -47,13 +46,11 @@ export default withRouter(class App extends Component {
                 atActive={{ opacity: 1 }}
                 className="switch-wrapper"
               >
-                <Route path="/contact" component={Contact} />
                 <Route path="/about" component={About} />
                 <Route path="/projects" component={Projects} />
                 <Route path="*" component={Home} />
               </AnimatedSwitch>
           </Container>
-          
           <YTBG strongoverlay={this.state.strongoverlay}/>
       </div>
     );

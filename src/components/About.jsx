@@ -39,10 +39,10 @@ export default class AboutComponent extends Component {
     }
     render() {
         return(
-            <Container  style={{marginBottom: "10vh"}}>
+            <Container>
                 <Row  className="vh-100 position-relative" id="info">
                     <Col md={7} className="fullcenter">
-                        <h1>WHO'S KEENPLIFY</h1>
+                        <h1>WHOS KEENPLIFY</h1>
                         <p>
                             <b>Aczell Bien Florencio</b> is a fullstack developer from Quezon City, Philippines. Since his childhood, 
                             he had experience with local and cloud icafe solutions, PXE diskless/network boot systems, Windows installation 
@@ -52,12 +52,14 @@ export default class AboutComponent extends Component {
                         </p>
                     </Col>
                 </Row>
-                <Row className="vh-100  position-relative" id="chart">
+                <Row className="vh-100 position-relative" id="chart">
                     <Col className="fullcenter">
                         <h1>LANGUAGE EXPERTISE LEVELS</h1>
                         <p>(by year as percentage, the higher the better)</p>
                         <Bar 
                             data={this.state.expchart}
+                            width={80}
+                            height={30}
                         />
                     </Col>
                 </Row>

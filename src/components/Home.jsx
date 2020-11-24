@@ -64,7 +64,8 @@ export default class HomeComponent extends Component {
                     inline
                     style={{
                         overflow: "hidden",
-                        fontStretch: "condensed"
+                        fontStretch: "condensed",
+                        fontSize: "3vw"
                     }}
                 />
             </Home>

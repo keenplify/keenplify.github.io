@@ -47,6 +47,7 @@ export default class YTBGComponent extends Component {
                     <img style={{
                         opacity: ".5"
                     }}
+                        alt="Background"
                         src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/131f4324-b78b-438a-a277-b2a07445e47f/dwp0y1-4e71bec2-05d6-462d-a310-8f3ad76e898a.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMTMxZjQzMjQtYjc4Yi00MzhhLWEyNzctYjJhMDc0NDVlNDdmXC9kd3AweTEtNGU3MWJlYzItMDVkNi00NjJkLWEzMTAtOGYzYWQ3NmU4OThhLmpwZyJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl19.jpmgJVpTmVqkM--lV2ZLRhGPo77egEOirZ5r8bSjgCY"
                     />
                 </YT>

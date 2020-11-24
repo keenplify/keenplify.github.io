@@ -1,21 +1,24 @@
 import React, { Component } from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+//import styled from 'styled-components'
 
-const SocImg = styled.img`
+/* (const SocImg = styled.img`
     height: 5vh;
     width: 5vh;
     margin: .2vw;
     border-radius: 50%;
-`
+
+    @media (max-width: 499px) {
+        display: none;
+    }
+` */
 
 export default class NavigationBar extends Component {
     componentDidMount() {
         window.addEventListener('scroll', (e) => {
             let toffset=window.innerHeight / 4
             let clamped = Math.min(Math.max(0, window.pageYOffset / toffset), 1)
-            console.log(clamped)
             document.querySelector(".navbar").style.backgroundColor = `rgba(255,255,0,${clamped})`
             
             if (clamped > .8) {
@@ -39,6 +42,7 @@ export default class NavigationBar extends Component {
         <Navbar fixed="bottom" variant="dark">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="d-flex">
+            {/*
             <Nav className="d-flex mr-auto">
                 <a href="https://facebook.com/keenplifyy" target="_blank" rel="noreferrer">
                     <SocImg 
@@ -50,12 +54,11 @@ export default class NavigationBar extends Component {
                         src="https://www.shareicon.net/data/256x256/2015/08/29/92756_play_607x607.png"
                         alt="Youtube social"/>
                 </a>
-            </Nav>
-            <Nav className="d-flex">
+            </Nav> */}
+            <Nav className="d-flex ml-auto">
                 <Link className="nav-link" to="/" alt="HOME">HOME</Link>
                 <Link className="nav-link" to="/about" alt="ABOUT">ABOUT</Link>
                 <Link className="nav-link" to="/projects" alt="PROJECTS">PROJECTS</Link>
-                <Link className="nav-link" to="/contact" alt="CONTACT">CONTACT</Link>
             </Nav>
             </Navbar.Collapse>
         </Navbar>
