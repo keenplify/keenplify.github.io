@@ -51,6 +51,10 @@ body {
   -webkit-text-stroke: 1px rgba(var(--primary), 0.5);
 }
 
+a {
+  color: yellow;
+}
+
 .navbar {
   height: 10vh;
   transition: 0.5s;
