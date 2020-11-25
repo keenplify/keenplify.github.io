@@ -85,6 +85,11 @@ export default class ProjectsComponent extends Component {
             ]
         }
     }
+
+    componentDidMount() {
+        document.title = "Keenplify | Projects"
+    }
+
     render() {
         return(
             <Row style={{marginBottom: "10vh"}}>

@@ -13,7 +13,7 @@ ReactDOM.render(
     <MessengerCustomerChat
       pageId="101047905083084"
       appId="4032537310109611"
-      themeColor="#ff7e29"  
+      themeColor="#ff7e29"
     />
   </React.StrictMode>,
   document.getElementById('root')
