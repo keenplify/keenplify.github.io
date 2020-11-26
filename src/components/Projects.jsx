@@ -55,7 +55,30 @@ export default class ProjectsComponent extends Component {
                             link: "https://gamebanana.com/wips/49236"
                         }
                     ]
-                },  {
+                }, {
+                    title: "Streamland",
+                    image: "https://t2.rbxcdn.com/8d2d155a490cce40c5bf39daca8e663b",
+                    desc: `
+                        A Roblox game heavily featuring house building and passive tycoon-like streaming.
+                        Join the community of live streamers where you can grow your streaming dreams and build your dream house using your stream credits!
+                    `,
+                    languages: [
+                        {
+                            name: "Roblox Studio",
+                            img: "https://upload.wikimedia.org/wikipedia/commons/b/b5/ROBLOX_Studio_icon.png"
+                        },
+                        {
+                            name: "Lua",
+                            img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/1200px-Lua-Logo.svg.png"
+                        }
+                    ],
+                    links: [
+                        {
+                            name: "Roblox",
+                            link: "https://www.roblox.com/games/5218364514/"
+                        }
+                    ]
+                }, {
                     title: "Lurkr",
                     image: "https://i.ibb.co/rG1DSSb/tset.png",
                     desc: `
