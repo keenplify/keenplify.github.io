@@ -59,7 +59,7 @@ export default class ProjectsComponent extends Component {
                     title: "Streamland",
                     image: "https://t2.rbxcdn.com/8d2d155a490cce40c5bf39daca8e663b",
                     desc: `
-                        A Roblox game heavily featuring house building and passive tycoon-like streaming.
+                        A Roblox game heavily featuring house building and active tycoon-like streaming.
                         Join the community of live streamers where you can grow your streaming dreams and build your dream house using your stream credits!
                     `,
                     languages: [
