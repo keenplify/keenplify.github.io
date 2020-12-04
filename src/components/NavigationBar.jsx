@@ -27,7 +27,7 @@ export default class NavigationBar extends Component {
 
     render() {
         return(
-        <Navbar fixed="bottom" variant="dark">
+        <Navbar fixed="bottom" style={{overflow: 'hidden'}}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="d-flex">
             <Nav className="d-flex ml-auto">

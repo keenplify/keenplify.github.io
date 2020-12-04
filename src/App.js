@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import { Container } from 'react-bootstrap'
-import { Route, withRouter } from 'react-router-dom'
-import { AnimatedSwitch } from 'react-router-transition';
+import { Route, withRouter, Switch } from 'react-router-dom'
 
 import NavigationBar from './components/NavigationBar'
 import Home from './components/Home'
@@ -24,7 +23,6 @@ export default withRouter(class App extends Component {
 
   componentWillMount() {
     this.unlisten = this.props.history.listen((location, action) => {
-      console.log(location);
       this.setState({
         strongoverlay: (location.pathname === "/") ? ("0"):("1")
       })
@@ -40,7 +38,7 @@ export default withRouter(class App extends Component {
         
           <NavigationBar />
           <Container fluid>
-              <AnimatedSwitch
+              <Switch
                 atEnter={{ opacity: 0 }}
                 atLeave={{ opacity: 0 }}
                 atActive={{ opacity: 1 }}
@@ -49,7 +47,7 @@ export default withRouter(class App extends Component {
                 <Route path="/about" component={About} />
                 <Route path="/projects" component={Projects} />
                 <Route path="*" component={Home} />
-              </AnimatedSwitch>
+              </Switch>
           </Container>
           <YTBG strongoverlay={this.state.strongoverlay}/>
       </div>

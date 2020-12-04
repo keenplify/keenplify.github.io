@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Row, Col, Card } from 'react-bootstrap'
+import { motion } from 'framer-motion';
 
 const LanguageItem = styled.picture`
     
@@ -115,11 +116,39 @@ export default class ProjectsComponent extends Component {
 
     render() {
         return(
-            <Row style={{marginBottom: "10vh"}}>
+            <Row style={{marginBottom: "10vh", overflow: 'hidden'}}>
                 <Col>
                     <h1 className="text-center">PROJECTS</h1>
-                    <Row>
-                        {this.state.projects.map((proj, i) => (<Col md={4} className="mb-3"><Card className="bg-dark">
+                    <motion.div 
+                        variants={{
+                            'show': {
+                                opacity:1,
+                                x: 0,
+                                transition: {
+                                    staggerChildren: .3
+                                }
+                            },
+                            'hide': {opacity:0, x: 128}
+                        }}
+                        className="row"
+                        initial='hide'
+                        animate='show'
+                        >
+                        {this.state.projects.map((proj, i) => (
+                        <motion.div 
+                            className="mb-3 col-md-4"
+                            variants={{
+                                hide: {
+                                    opacity:0,
+                                    x: 128
+                                },
+                                show: {
+                                    opacity:1,
+                                    x: 0
+                                }
+                            }}
+                            transition={{duration: .5}}
+                        ><Card className="bg-dark">
                             <Card.Img src={proj.image} />
                             <Card.Title>{proj.title}</Card.Title>
                             <Card.Body>
@@ -138,8 +167,8 @@ export default class ProjectsComponent extends Component {
                                     <a href={link.link} target="_blank" rel="noreferrer" style={{color: "yellow"}}>{link.name}</a> 
                                 ))): (<span className="text-muted">Unavailable</span>)}
                             </Card.Footer>
-                        </Card></Col>))}
-                    </Row>
+                        </Card></motion.div>))}
+                    </motion.div>
                 </Col>
             </Row>     
         )
