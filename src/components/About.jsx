@@ -102,7 +102,6 @@ export default class AboutComponent extends Component {
                 }}
                 initial='hide'
                 animate='show'
-                style={{overflow: 'hidden'}}
                 >
                 <motion.div 
                     className="row" 
