@@ -116,7 +116,7 @@ export default class AboutComponent extends Component {
                         className="col-md-6 my-auto"
                         variants={ParentVariants}
                     >
-                        <motion.h1 variants={ChildrenVariants} transition={ChildrenTransitions}>WHOS KEENPLIFY</motion.h1>
+                        <motion.h1 variants={ChildrenVariants} transition={{duration: 1}}>WHOS KEENPLIFY</motion.h1>
                         <motion.p  variants={ChildrenVariants} transition={ChildrenTransitions}>
                             <b>Aczell Bien Florencio</b> is a fullstack developer from Quezon City, Philippines. Since his childhood, 
                             he had experience with local and cloud icafe solutions, PXE diskless/network boot systems, Windows installation 
@@ -126,8 +126,8 @@ export default class AboutComponent extends Component {
                         </motion.p>
                     </motion.div>
                     <div className="col-md-1"/>
-                    <motion.div as={Content} className="col-md-5 my-auto">
-                        <h1>SOCIAL MEDIAS</h1>
+                    <motion.div as={Content}  variants={ParentVariants} transition={ChildrenTransitions} className="col-md-5 my-auto">
+                        <motion.h1 variants={ChildrenVariants} transition={{duration: 1}}>SOCIAL MEDIAS</motion.h1>
                         <SocLink
                             variants={ChildrenVariants}
                             transition={ChildrenTransitions}

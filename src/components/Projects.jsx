@@ -118,7 +118,12 @@ export default class ProjectsComponent extends Component {
         return(
             <Row style={{marginBottom: "10vh", overflow: 'hidden'}}>
                 <Col>
-                    <h1 className="text-center">PROJECTS</h1>
+                    <motion.h1 
+                        className="text-center" 
+                        animate={{opacity: 1, x:0}}
+                        initial={{opacity: 0, x:128}}
+                        transition={{duration: 1}}
+                        >PROJECTS</motion.h1>
                     <motion.div 
                         variants={{
                             'show': {
