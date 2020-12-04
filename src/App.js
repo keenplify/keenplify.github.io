@@ -37,7 +37,7 @@ export default withRouter(class App extends Component {
       <div className="App">
         
           <NavigationBar />
-          <Container fluid>
+          <Container fluid style={{overflow: 'hidden'}}>
               <Switch
                 atEnter={{ opacity: 0 }}
                 atLeave={{ opacity: 0 }}
