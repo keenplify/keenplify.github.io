@@ -37,6 +37,7 @@ export default class ProjectsComponent extends Component {
                 {
                     title: "CSGO HUD Plugin",
                     image: "https://screenshots.gamebanana.com/img/ss/wips/5bb76bd62e577.jpg",
+                    year: 2015,
                     desc: `
                         The plugin gives Counter Strike 1.6 (CS1.6) a full port of Counter Strike Government Offensive (CSGO)'s
                         new Panorama ingame HUD using AMXMODX and Metadrawer.
@@ -59,6 +60,7 @@ export default class ProjectsComponent extends Component {
                 }, {
                     title: "Streamland",
                     image: "https://t2.rbxcdn.com/8d2d155a490cce40c5bf39daca8e663b",
+                    year: 2018,
                     desc: `
                         A Roblox game heavily featuring house building and active tycoon-like streaming.
                         Join the community of live streamers where you can grow your streaming dreams and build your dream house using your stream credits!
@@ -80,10 +82,41 @@ export default class ProjectsComponent extends Component {
                         }
                     ]
                 }, {
+                    title: "QR Hang-Tag",
+                    image: "https://i.ibb.co/xfJm3Pw/hangtag.png",
+                    year: 2021,
+                    desc: `
+                        Another web experiment of kin, it uses react-qr-reader to read and process QR codes,
+                        html2canvas to create printable React components. The app's goal is to turn clothing
+                        hang tags into a discount voucher, thus making hang tags reusable. 
+                    `,
+                    languages: [
+                        {
+                            name: "NodeJS",
+                            img: "https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
+                        }, {
+                            name: "Create-React-App",
+                            img: "https://miro.medium.com/max/500/1*cPh7ujRIfcHAy4kW2ADGOw.png"
+                        }, {
+                            name: "Express",
+                            img: "https://i.ibb.co/mSCzBHf/ex.png"
+                        }, {
+                            name: "PassportJS",
+                            img: "https://miro.medium.com/max/400/1*YI1tt4kGzvea-v4dAhZ90w.png"
+                        }
+                    ],
+                    links: [
+                        {
+                            name: "Github",
+                            link: "https://github.com/keenplify/qr-hang-tag"
+                        }
+                    ]
+                }, {
                     title: "Lurkr",
                     image: "https://i.ibb.co/rG1DSSb/tset.png",
+                    year: 2020,
                     desc: `
-                        Lurkr is keenplify's experiment on MERN stack. The web app's vision is to create an environment
+                        Lurkr is keenplify's first experiment on MERN stack. The web app's vision is to create an environment
                         where unnoticed content creators can post their contents/livestreams and get promoted not based
                         on their popularity.
                     `,
@@ -105,7 +138,7 @@ export default class ProjectsComponent extends Component {
                             img: "https://images.opencollective.com/jakecattrall/2036487/avatar/256.png"
                         } 
                     ]
-                },  
+                }, 
             ]
         }
     }
@@ -155,7 +188,7 @@ export default class ProjectsComponent extends Component {
                             transition={{duration: .5}}
                         ><Card className="bg-dark">
                             <Card.Img src={proj.image} />
-                            <Card.Title>{proj.title}</Card.Title>
+                            <Card.Title>{proj.title} ({proj.year})</Card.Title>
                             <Card.Body>
                                 <div className="mb-3">
                                     {proj.languages.map((lang) => (
