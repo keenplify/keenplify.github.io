@@ -250,4 +250,42 @@ export const PROJECTS = [
     ],
     icon: <FaMobile />,
   },
-];
+  {
+    title: "Mobile Parking App",
+    image: "https://i.ibb.co/x72cTWB/parkingapp.png",
+    year: 2021,
+    desc: `
+            A simple commissioned mobile app that is built to offer digitalized parking system. It uses Firebase as its backend and
+            React Native / Expo as its mobile framework.
+          `,
+    languages: [
+      {
+        name: "NodeJS",
+        img: "https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png",
+      },
+      {
+        name: "React Native",
+        img: "https://miro.medium.com/max/500/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+      },
+      {
+        name: "Expo",
+        img: "https://i.ibb.co/6tNnNBJ/Expo-1324888717852364845.png",
+      },
+      {
+        name: "Firebase",
+        img: "https://i.ibb.co/my1gTj3/5847f40ecef1014c0b5e488a.png",
+      },
+    ],
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/keenplify/public-market-mobile-app",
+      },
+      {
+        name: "APK Releases",
+        link: "https://drive.google.com/drive/folders/15awSLZhtWikCleFPd8RUUo52mhSHcakU?usp=sharing",
+      },
+    ],
+    icon: <FaMobile />,
+  },
+].reverse();
