@@ -13,15 +13,16 @@ const Centered = styled.div`
   top: 45%;
   transform: translate(-50%, -50%);
   color: yellow;
-  font-size: 10vw;
+  font-size: 8.5vw;
   font-style: italic;
+  font-weight: 900;
   z-index: 2;
   &:before {
     content: "ACZELL‎‏‏‎ BIEN";
     color: rgba(0, 0, 0, 0);
     -webkit-text-stroke: 0.5px yellow;
     position: absolute;
-    font-size: 15vw;
+    font-size: 12.5vw;
     white-space: nowrap;
     left: 50%;
     top: 50%;
@@ -71,6 +72,7 @@ export default class HomeComponent extends Component {
             overflow: "hidden",
             fontStretch: "condensed",
             fontSize: "3vw",
+            fontWeight: "700",
           }}
         />
       </Home>

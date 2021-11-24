@@ -5,8 +5,8 @@ import { HashRouter, Route, withRouter, Switch } from "react-router-dom";
 import NavigationBar from "./components/NavigationBar";
 import Home from "./components/Home";
 import About from "./components/About";
-import Projects from "./components/Projects";
 import YTBG from "./components/YTBG";
+import { ProjectsV2 } from "./components/ProjectsV2";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -33,7 +33,6 @@ export default withRouter(
     }
 
     render() {
-      console.log(window.location.hash);
       return (
         <HashRouter basename="/">
           <div className="App">
@@ -46,7 +45,7 @@ export default withRouter(
                 className="switch-wrapper"
               >
                 <Route path="/about" component={About} />
-                <Route path="/projects" component={Projects} />
+                <Route path="/projects" component={ProjectsV2} />
                 <Route path="*" component={Home} />
               </Switch>
             </Container>

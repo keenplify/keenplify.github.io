@@ -1,7 +1,10 @@
 import React, { Component } from "react";
-import { Bar } from "react-chartjs-2";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { Card } from "react-bootstrap";
+import { EXPERIENCES } from "../helpers/about.helper";
+import { Spacer } from "../styles/ProjectsV2.styles";
+import { FadeInWhenVisible } from "./FadeInDiv";
 
 const SocMed = styled.img`
   width: 24px;
@@ -44,71 +47,20 @@ const ChildrenVariants = {
 
 const ChildrenTransitions = { duration: 1 };
 
-const Content = styled(motion.div)`
-  @media (max-width: 600px) {
-    height: 80vh;
+const Content = styled(FadeInWhenVisible)`
+  @media (max-width: 600px) {4
     padding-top: 20vh;
   }
 `;
 
 export default class AboutComponent extends Component {
-  constructor(p) {
-    super(p);
-
-    this.state = {
-      expchart: {
-        labels: [
-          "Pawn",
-          "Lua",
-          "HTML/CSS/Javascript",
-          "React",
-          "React Native",
-          "C#",
-          "Java",
-          "Express",
-          "PHP",
-          "Typescript",
-        ],
-        datasets: [
-          {
-            label: "2019",
-            backgroundColor: "transparent",
-            borderColor: "tomato",
-            borderWidth: 5,
-            hoverBackgroundColor: "transparent",
-            hoverBorderColor: "rgba(255,255,1)",
-            hidden: true,
-            data: [25, 40, 50, 25, 0, 0, 0, 40],
-          },
-          {
-            label: "2020",
-            backgroundColor: "transparent",
-            borderColor: "FUCHSIA",
-            borderWidth: 5,
-            hoverBackgroundColor: "transparent",
-            hoverBorderColor: "rgba(255,255,1)",
-            data: [25, 45, 60, 60, 25, 30, 40, 50, 15],
-          },
-          {
-            label: "2021",
-            backgroundColor: "transparent",
-            borderColor: "yellow",
-            borderWidth: 5,
-            hoverBackgroundColor: "transparent",
-            hoverBorderColor: "rgba(255,255,1)",
-            data: [25, 50, 75, 80, 65, 40, 40, 75, 45, 50],
-          },
-        ],
-      },
-    };
-  }
-
   componentDidMount() {
     document.title = "Keenplify | About";
   }
+
   render() {
     return (
-      <motion.div
+      <FadeInWhenVisible
         className="container"
         variants={{
           show: {
@@ -123,14 +75,14 @@ export default class AboutComponent extends Component {
         initial="hide"
         animate="show"
       >
-        <motion.div
-          className="row"
+        <FadeInWhenVisible
+          className="row mt-5"
           style={{ minHeight: "100vh" }}
           id="info"
           variants={ParentVariants}
           transition={{ duration: 0.5 }}
         >
-          <motion.div
+          <FadeInWhenVisible
             as={Content}
             className="col-md-6 my-auto"
             variants={ParentVariants}
@@ -141,6 +93,7 @@ export default class AboutComponent extends Component {
             <motion.p
               variants={ChildrenVariants}
               transition={ChildrenTransitions}
+              className="text-justify"
             >
               <b>Aczell Bien Florencio</b> is a web developer from Quezon City,
               Philippines. Since his childhood, he had experience with local and
@@ -151,9 +104,9 @@ export default class AboutComponent extends Component {
               work, learn and have fun with forever changing technologies. He
               uploads videos in his Youtube account once in a blue moon.
             </motion.p>
-          </motion.div>
+          </FadeInWhenVisible>
           <div className="col-md-1" />
-          <motion.div
+          <FadeInWhenVisible
             as={Content}
             variants={ParentVariants}
             transition={ChildrenTransitions}
@@ -227,29 +180,37 @@ export default class AboutComponent extends Component {
               />
               (Gamebanana) Keenplify
             </SocLink>
-          </motion.div>
-        </motion.div>
-        <motion.div className="row vh-100" md={12}>
-          <Content
-            className="col"
-            variants={ParentVariants}
-            transition={{ duration: 0.5 }}
-          >
-            <h1 variants={ChildrenVariants} transition={ChildrenTransitions}>
-              EXPERTISE LEVELS
-            </h1>
-            <p variants={ChildrenVariants} transition={ChildrenTransitions}>
-              (by year as percentage, the higher the better)
-            </p>
-            <motion.div
+          </FadeInWhenVisible>
+        </FadeInWhenVisible>
+        <h1>SKILLS AND EXPERIENCES</h1>
+        <FadeInWhenVisible
+          className="row"
+          variants={ParentVariants}
+          transition={{ duration: 0.5 }}
+          style={{ marginBottom: "8em" }}
+        >
+          {EXPERIENCES.map((exp) => (
+            <FadeInWhenVisible
               variants={ChildrenVariants}
               transition={ChildrenTransitions}
+              className="col-md-6 my-2"
             >
-              <Bar data={this.state.expchart} width={80} height={30} />
-            </motion.div>
-          </Content>
-        </motion.div>
-      </motion.div>
+              {
+                <Card bg="dark">
+                  <Card.Header
+                    className="font-weight-bold"
+                    style={{ color: "yellow" }}
+                  >
+                    {exp.name}
+                  </Card.Header>
+                  <Card.Body>{exp.desc}</Card.Body>
+                </Card>
+              }
+            </FadeInWhenVisible>
+          ))}
+        </FadeInWhenVisible>
+        <Spacer />
+      </FadeInWhenVisible>
     );
   }
 }

@@ -2,29 +2,46 @@ import React, { Component } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+const mobilize = () => {
+  document.querySelector(".navbar").style.backgroundColor = "yellow";
+  let links = document.querySelectorAll(".nav-link");
+
+  for (let i = 0; i < links.length; i++) {
+    links[i].classList.add("nav-link-black");
+  }
+  return;
+};
+
+const handleScroll = () => {
+  if (window.innerWidth <= 768) return mobilize();
+
+  window.addEventListener("scroll", (e) => {
+    let toffset = window.innerHeight / 4;
+    let clamped = Math.min(Math.max(0, window.pageYOffset / toffset), 1);
+    document.querySelector(
+      ".navbar"
+    ).style.backgroundColor = `rgba(255,255,0,${clamped})`;
+
+    if (clamped > 0.8) {
+      let links = document.querySelectorAll(".nav-link");
+
+      for (let i = 0; i < links.length; i++) {
+        links[i].classList.add("nav-link-black");
+      }
+    } else {
+      let links = document.querySelectorAll(".nav-link");
+
+      for (let i = 0; i < links.length; i++) {
+        links[i].classList.remove("nav-link-black");
+      }
+    }
+  });
+};
+
 export default class NavigationBar extends Component {
   componentDidMount() {
-    window.addEventListener("scroll", (e) => {
-      let toffset = window.innerHeight / 4;
-      let clamped = Math.min(Math.max(0, window.pageYOffset / toffset), 1);
-      document.querySelector(
-        ".navbar"
-      ).style.backgroundColor = `rgba(255,255,0,${clamped})`;
-
-      if (clamped > 0.8) {
-        let links = document.querySelectorAll(".nav-link");
-
-        for (let i = 0; i < links.length; i++) {
-          links[i].classList.add("nav-link-black");
-        }
-      } else {
-        let links = document.querySelectorAll(".nav-link");
-
-        for (let i = 0; i < links.length; i++) {
-          links[i].classList.remove("nav-link-black");
-        }
-      }
-    });
+    if (window.innerWidth <= 768) mobilize();
+    handleScroll();
   }
 
   render() {

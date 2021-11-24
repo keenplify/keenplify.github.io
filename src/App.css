@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&display=swap");
 :root {
   --primary: 255, 255, 0;
 }
@@ -14,7 +16,7 @@
 body {
   background-color: black;
   color: white;
-  font-family: "Franklin Gothic", Arial, sans-serif;
+  font-family: "Libre Franklin", "Franklin Gothic", Arial, sans-serif;
 }
 
 .nav-link {
@@ -87,7 +89,7 @@ a {
 }
 
 h1 {
-  font-size: 3.5em;
+  font-size: 2.5em;
   font-style: italic;
   background: repeating-linear-gradient(
     to bottom,
@@ -99,13 +101,20 @@ h1 {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: none;
+  font-weight: 900;
   /* -webkit-text-stroke: 1px rgba(var(--primary), 1); */
 }
+
+h3 {
+  font-weight: 700;
+}
+
 p {
   font-size: 1.2em;
   text-align: justify;
   text-indent: 1.5em;
   font-stretch: condensed;
+  font-family: "Poppins";
 }
 
 b {
