@@ -31,4 +31,12 @@ export const EXPERIENCES = [
     name: "Game Modding",
     desc: "He has the background of modding games such as Warcraft III, Grand Theft Auto, Counter Strike and others. He is also well versed in the tools that used when modding.",
   },
+  {
+    name: "ICafe Setup/Management",
+    desc: "He has proficiency in softwares an ICafe typically uses such as iCafe timers, iPXE/diskless setup, Windows optimization and much more.",
+  },
+  {
+    name: "Graphics Design",
+    desc: "Has years of experience in using graphics design applications such as Adobe Photoshop, Adobe Premiere and Adobe AfterEffects.",
+  },
 ];

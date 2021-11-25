@@ -31,13 +31,12 @@ const Centered = styled.div`
 `;
 
 const afters = [
-  "REACT DEVELOPER",
+  "WEB DEVELOPER",
   "VISUAL DESIGNER",
   "VIDEO EDITOR",
   "CONTENT CREATOR",
-  "WEB DEVELOPER",
   "ICAFE SOLUTIONS PROVIDER",
-].sort(() => Math.random() - 0.5);
+];
 
 export default class HomeComponent extends Component {
   constructor(props) {
