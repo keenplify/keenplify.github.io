@@ -31,12 +31,16 @@ const Centered = styled.div`
 `;
 
 const afters = [
+  "UI/UX DESIGNER",
   "WEB DEVELOPER",
   "VISUAL DESIGNER",
   "VIDEO EDITOR",
   "CONTENT CREATOR",
   "ICAFE SOLUTIONS PROVIDER",
-];
+]
+  .map((value) => ({ value, sort: Math.random() }))
+  .sort((a, b) => a.sort - b.sort)
+  .map(({ value }) => value);
 
 export default class HomeComponent extends Component {
   constructor(props) {
@@ -68,7 +72,6 @@ export default class HomeComponent extends Component {
           text={afters[this.state.index % afters.length]}
           inline
           style={{
-            overflow: "hidden",
             fontStretch: "condensed",
             fontSize: "3vw",
             fontWeight: "700",
