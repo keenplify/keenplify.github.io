@@ -279,11 +279,11 @@ export const PROJECTS = [
     links: [
       {
         name: "Github",
-        link: "https://github.com/keenplify/public-market-mobile-app",
+        link: "https://github.com/keenplify/parkingapp-rn",
       },
       {
         name: "APK Releases",
-        link: "https://drive.google.com/drive/folders/15awSLZhtWikCleFPd8RUUo52mhSHcakU?usp=sharing",
+        link: "https://drive.google.com/drive/folders/12KDJrhMwmmDOptkRzPlWnFMEz00A1xo7?usp=sharing",
       },
     ],
     icon: <FaMobile />,
