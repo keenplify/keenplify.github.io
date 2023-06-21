@@ -1,8 +1,11 @@
+
 /// <reference types="vitest" />
 /// <reference types="vite/client" />
 
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
+//@ts-expect-error No types for svg inject
+import SVGInjectPlugin from "vite-plugin-svg-inject";
 // import devtools from 'solid-devtools/vite';
 
 export default defineConfig({
@@ -13,6 +16,7 @@ export default defineConfig({
     */
     // devtools(),
     solidPlugin(),
+    SVGInjectPlugin()
   ],
   server: {
     port: 3000,
