@@ -39,7 +39,7 @@ export default function NGMenu({ class: containerClass }: ProjectElementProps) {
         <div class="w-full h-[50%] min-h-[10rem] bg-[#d8faf6] animate-fadeInLeft rounded-2xl"></div>
         <img
           src="/mockups/ngm-laptop.png"
-          class="w-[70%] absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] animate-fadeIn"
+          class="w-[70%] absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] animate-fadeIn animate-delay-500"
         />
       </div>
       <div class="col-span-1 flex flex-col justify-between">
