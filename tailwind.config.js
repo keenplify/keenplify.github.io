@@ -1,8 +1,10 @@
+import { withAnimations } from 'animated-tailwindcss';
+
 /** @type {import('tailwindcss').Config} */
-export default {
+export default withAnimations({
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {},
@@ -19,5 +21,6 @@ export default {
   plugins: [
     require("daisyui"),
     require('@tailwindcss/typography'),
+    require('tailwindcss-animatecss'),
   ],
-}
+})

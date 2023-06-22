@@ -1,26 +1,33 @@
 import { DarkLayout } from "../components/layouts/dark";
-import { projects } from "../projects";
+import { ProjectsContainer } from "../components/projects-container";
 import LayeredSteps from "../svgs/LayeredSteps";
-import dayjs from "dayjs";
 
 function Navigation() {
   return (
     <ul class="absolute top-0 left-0 w-full flex justify-end gap-8 sm:gap-16 md:gap-24 p-6 text-primary-content font-bold z-50">
       <li>
-        <a href="#about">ABOUT</a>
+        <a href="#about" class="link">
+          ABOUT
+        </a>
       </li>
       <li>
-        <a href="#work">WORK</a>
+        <a href="#work" class="link">
+          WORK
+        </a>
       </li>
-      <li>CONTACT</li>
+      <li>
+        <a href="#contact" class="link">
+          CONTACT
+        </a>
+      </li>
     </ul>
   );
 }
 
-function Circles() {
+export function Circles() {
   return (
-    <div>
-      <div class="absolute outline outline-4 outline-base-100 w-[100%] -top-0 -left-0 aspect-square rounded-full  -z-5" />
+    <div class="w-full h-screen absolute">
+      <div class="absolute outline outline-4 outline-base-100 w-[100%] -top-0 -left-0 aspect-square rounded-full -z-5" />
       <div class="absolute outline outline-4 outline-base-100 w-[108%] -top-[4%] -left-[4%] aspect-square rounded-full -z-5" />
       <div class="absolute outline outline-4 outline-base-100 w-[116%] -top-[8%] -left-[8%] aspect-square rounded-full -z-5 opacity-75" />
       <div class="absolute outline outline-4 outline-base-100 w-[124%] -top-[12%] -left-[12%] aspect-square rounded-full -z-5 opacity-50" />
@@ -30,7 +37,7 @@ function Circles() {
   );
 }
 
-export function Home() {
+export default function Home() {
   return (
     <DarkLayout class="px-4 relative mt-36">
       <Circles />
@@ -70,8 +77,8 @@ export function Home() {
         <div class="flex flex-col md:flex-row justify-center gap-12 lg:gap-16 my-24 px-8">
           <span class="badge badge-primary">ABOUT</span>
           <p class="font-bold text-2xl uppercase max-w-[640px]">
-            A passionate web developer with working experience with frontend and
-            backend development within NodeJS ecosystem.
+            A passionate web developer with working experience with web and
+            mobile fullstack development within NodeJS ecosystem.
           </p>
         </div>
         <h2 class="text-lg text-center uppercase font-bold" id="work">
@@ -80,39 +87,7 @@ export function Home() {
         <p class="text-center px-4">
           Here are some of the projects I proudly worked at
         </p>
-        <div class="grid grid-cols-2 md:grid-cols-3 my-8">
-          {projects.map((proj) => (
-            <button
-              class="aspect-square overflow-hidden relative bg-cover bg-center"
-              style={{
-                "background-image": proj.imageMin
-                  ? `url("${proj.imageMin}")`
-                  : undefined,
-              }}
-            >
-              <img
-                src={proj.image}
-                class="w-full h-full object-cover object-center"
-                loading="lazy"
-              />
-              <div class="absolute w-full h-full top-0 left-0 hover:bg-black/50 transition-all"></div>
-              {proj.date && (
-                <div class="absolute top-0 right-0 bg-neutral text-neutral-content py-1 px-2 rounded-bl-lg text-sm font-bold opacity-75">
-                  {proj.date}
-                </div>
-              )}
-
-              <div class="absolute bottom-0 left-0 w-full h-max flex flex-col gap-1 lg:gap-2 items-center z-50 p-2 lg:p-4 pointer-events-none">
-                <span class="badge badge-primary font-bold">{proj.title}</span>
-                <div class="flex gap-1 md:gap-2">
-                  {proj.badges?.map((badge) => (
-                    <span class="badge badge-secondary">{badge}</span>
-                  ))}
-                </div>
-              </div>
-            </button>
-          ))}
-        </div>
+        <ProjectsContainer class="flex flex-col md:grid grid-cols-1 md:grid-cols-2 gap-16 p-16 my-8 rounded-b-2xl overflow-hidden relative" />
       </div>
     </DarkLayout>
   );

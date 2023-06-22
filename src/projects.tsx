@@ -1,4 +1,26 @@
-export const projects = [
+import { Component, JSX } from "solid-js";
+import NGMenu from "./components/projects/ngmenu";
+import Nadena from "./components/projects/nadena";
+import NGCards from "./components/projects/ngcards";
+
+export interface Project {
+  title: string;
+  badges: string[];
+  desc: string;
+  date: string;
+  tech?: string[];
+  link?: string;
+  image?: string;
+  imageMin?: string;
+  company?: string;
+  element?: (props: ProjectElementProps) => JSX.Element;
+}
+
+export interface ProjectElementProps {
+  class?: string;
+}
+
+export const projects: Project[] = [
   {
     title: "NG Menu",
     badges: ["Frontend", "Backend"],
@@ -8,7 +30,8 @@ export const projects = [
     link: "https://ngmenu.com",
     image: "/projects/ngmenu.png",
     imageMin: "/projects/ngmenu-min.png",
-    company: "Digital Brand Works"
+    company: "Digital Brand Works",
+    element: (props) => <NGMenu {...props} />,
   },
   {
     title: "Nadena",
@@ -18,7 +41,8 @@ export const projects = [
     link: "https://www.nadena.ae",
     image: "/projects/nadena.png",
     imageMin: "/projects/nadena-min.png",
-    company: "Digital Brand Works"
+    company: "Digital Brand Works",
+    element: (props) => <Nadena {...props} />,
   },
   {
     title: "NG Cards",
@@ -28,7 +52,8 @@ export const projects = [
     link: "https://www.ngcards.com",
     image: "/projects/ngcards.png",
     imageMin: "/projects/ngcards-min.png",
-    company: "Digital Brand Works"
+    company: "Digital Brand Works",
+    element: (props) => <NGCards {...props} />,
   },
   {
     title: "Rive",
@@ -37,7 +62,7 @@ export const projects = [
     date: "2023",
     image: "/projects/rive.png",
     imageMin: "/projects/rive-min.png",
-    company: "Digital Brand Works"
+    company: "Digital Brand Works",
   },
   {
     title: "IIFYM AE",
@@ -47,7 +72,7 @@ export const projects = [
     link: "https://www.iifym.ae",
     image: "/projects/iifym.png",
     imageMin: "/projects/iifym-min.png",
-    company: "Digital Brand Works"
+    company: "Digital Brand Works",
   },
   {
     title: "Mobile Parking App",
@@ -55,7 +80,7 @@ export const projects = [
     desc: "A simple commissioned mobile app that is built to offer digitalized parking system. It uses Firebase as its backend and React Native / Expo as its mobile framework.",
     date: "2021",
     image: "/projects/mobileparking.png",
-    imageMin: "/projects/mobileparking-min.png"
+    imageMin: "/projects/mobileparking-min.png",
   },
   {
     title: "Public Market",
@@ -63,7 +88,7 @@ export const projects = [
     desc: "Commissioned mobile app that utilizes React Native and Nativebase to provide service to online buyers and sellers. It's main goal is to become the middleman between online selling transactions and is inspired by the likes of Shopee and Lazada. It's server is hosted in Heroku and the images is stored at Amazon S3.",
     date: "2021",
     image: "/projects/pmma.png",
-    imageMin: "/projects/pmma-min.png"
+    imageMin: "/projects/pmma-min.png",
   },
   {
     title: "Streamland",
@@ -72,7 +97,7 @@ export const projects = [
     date: "2018-2019",
     link: "https://www.roblox.com/games/5218364514/",
     image: "/projects/streamland.png",
-    imageMin: "/projects/streamland-min.png"
+    imageMin: "/projects/streamland-min.png",
   },
   {
     title: "CSGO HUD Plugin",
@@ -81,6 +106,6 @@ export const projects = [
     date: "2017-2020",
     link: "https://gamebanana.com/wips/49236",
     image: "/projects/csgohud.png",
-    imageMin: "/projects/csgohud-min.png"
+    imageMin: "/projects/csgohud-min.png",
   },
 ];

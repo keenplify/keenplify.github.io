@@ -1,6 +1,5 @@
-import { Navigate, Route, Router, Routes } from "@solidjs/router";
-import { For, JSX } from "solid-js";
-import { Home } from "./pages/home";
+import { RouteDefinition, Router, useRoutes } from "@solidjs/router";
+import { For, JSX, lazy } from "solid-js";
 import { themeChange } from "theme-change";
 
 const themes = ["lemonade", "business", "aqua", "cyberpunk", "valentine"];
@@ -12,7 +11,15 @@ interface Props {
 const html = document.querySelector("html");
 const defaultTheme = localStorage.getItem("theme");
 
+const routes = [
+  {
+    path: "/",
+    component: lazy(() => import("./pages/home")),
+  },
+] as RouteDefinition[];
+
 export function Root({ children }: Props) {
+  const Routes = useRoutes(routes);
   themeChange();
 
   if (html && defaultTheme) {
@@ -21,7 +28,7 @@ export function Root({ children }: Props) {
 
   return (
     <>
-      <div class="flex gap-2 p-2">
+      {/* <div class="flex gap-2 p-2 flex-col">
         <For each={themes}>
           {(theme) => (
             <button
@@ -37,12 +44,9 @@ export function Root({ children }: Props) {
             </button>
           )}
         </For>
-      </div>
+      </div> */}
       <Router>
-        <Routes>
-          <Route path="/" component={Home} />
-          <Route path="*" element={<Navigate href="/" />} />
-        </Routes>
+        <Routes />
       </Router>
     </>
   );
