@@ -23,7 +23,7 @@ export default function NGCards({
           Customizable smart digital business card utilizing web technology. I
           mainly worked as the <b>frontend</b> for this project, creating super
           customizable website that shows up when the user has scanned the
-          digital business card using <b>React JS + Vite</b>.
+          digital business card. Used <b>React JS + Vite</b>.
         </p>
         <div>
           <a
