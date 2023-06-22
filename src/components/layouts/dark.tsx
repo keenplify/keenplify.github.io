@@ -15,7 +15,7 @@ export function DarkLayout({ children, class: classNames }: Props) {
       <div class={`w-full max-w-[1024px] z-50 ${classNames ?? ""}`}>
         {children}
       </div>
-      <ScatteredBlobs class="scale-[1.75] left-[50%] translate-x-[-50%] bottom-0 absolute" />
+      <ScatteredBlobs class="scale-[2.5] left-[50%] translate-x-[-50%] bottom-0 absolute" />
     </div>
   );
 }
