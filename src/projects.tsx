@@ -1,7 +1,13 @@
-import { Component, JSX } from "solid-js";
-import NGMenu from "./components/projects/ngmenu";
-import Nadena from "./components/projects/nadena";
-import NGCards from "./components/projects/ngcards";
+import { JSX, lazy } from "solid-js";
+
+const NGMenu = lazy(() => import("./components/projects/ngmenu"));
+const Nadena = lazy(() => import("./components/projects/nadena"));
+const NGCards = lazy(() => import("./components/projects/ngcards"));
+const Rive = lazy(() => import("./components/projects/rive"));
+const IIFYM = lazy(() => import("./components/projects/iifym"));
+const MobileParkingApp = lazy(
+  () => import("./components/projects/mobileparkingapp")
+);
 
 export interface Project {
   title: string;
@@ -63,6 +69,7 @@ export const projects: Project[] = [
     image: "/projects/rive.png",
     imageMin: "/projects/rive-min.png",
     company: "Digital Brand Works",
+    element: (props) => <Rive {...props} />,
   },
   {
     title: "IIFYM AE",
@@ -73,6 +80,7 @@ export const projects: Project[] = [
     image: "/projects/iifym.png",
     imageMin: "/projects/iifym-min.png",
     company: "Digital Brand Works",
+    element: (props) => <IIFYM {...props} />,
   },
   {
     title: "Mobile Parking App",
@@ -81,6 +89,7 @@ export const projects: Project[] = [
     date: "2021",
     image: "/projects/mobileparking.png",
     imageMin: "/projects/mobileparking-min.png",
+    element: (props) => <MobileParkingApp {...props} />,
   },
   {
     title: "Public Market",

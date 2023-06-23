@@ -50,12 +50,13 @@ export default function NGMenu({ class: containerClass }: ProjectElementProps) {
           Translate.
         </p>
         <p>
-          I also had chance to work for its Developers REST and Webhook API, to
-          be used for restaurants requiring custom integration with their POS.
+          Also had chance to work for its Developers REST and Webhook API, to be
+          used for restaurants requiring custom integration with their POS.
         </p>
         <p>
           I utilized both <b>React JS</b> and <b>Angular JS</b> as its frontend
-          language, and used <b>AdonisJS</b> as our backend framework.
+          language, and used <b>AdonisJS</b> as our backend framework. It is
+          also integrated with <b>Stripe</b> for payment and payouts processing.
         </p>
       </div>
       <div class="rounded-2xl row-span-2 flex items-center relative">

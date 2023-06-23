@@ -48,7 +48,7 @@ export default function Nadena({ class: containerClass }: ProjectElementProps) {
           Amplify.
         </p>
         <p>
-          I utilized <b>Nest JS</b> for the frontend, <b>Prisma</b> as the ORM
+          I utilized <b>Nest JS</b> for the backend, <b>Prisma</b> as the ORM
           and <b>Amazon RDS</b> as its database provider.
         </p>
         <p>

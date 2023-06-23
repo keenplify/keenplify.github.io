@@ -27,12 +27,12 @@ function Navigation() {
 export function Circles() {
   return (
     <div class="w-full h-screen absolute">
-      <div class="absolute outline outline-4 outline-base-100 w-[100%] -top-0 -left-0 aspect-square rounded-full -z-5" />
-      <div class="absolute outline outline-4 outline-base-100 w-[108%] -top-[4%] -left-[4%] aspect-square rounded-full -z-5" />
-      <div class="absolute outline outline-4 outline-base-100 w-[116%] -top-[8%] -left-[8%] aspect-square rounded-full -z-5 opacity-75" />
-      <div class="absolute outline outline-4 outline-base-100 w-[124%] -top-[12%] -left-[12%] aspect-square rounded-full -z-5 opacity-50" />
-      <div class="absolute outline outline-4 outline-base-100 w-[132%] -top-[16%] -left-[16%] aspect-square rounded-full -z-5 opacity-25" />
-      <div class="absolute outline outline-4 outline-base-100 w-[140%] -top-[20%] -left-[20%] aspect-square rounded-full -z-5 opacity-5" />
+      <div class="absolute outline outline-4 outline-base-100 w-[100%] top-[65%] translate-x-[-50%] left-[50%] translate-y-[-50%] aspect-square rounded-full -z-5" />
+      <div class="absolute outline outline-4 outline-base-100 w-[108%] top-[65%] translate-x-[-50%] left-[50%] translate-y-[-50%] aspect-square rounded-full -z-5" />
+      <div class="absolute outline outline-4 outline-base-100 w-[116%] top-[65%] translate-x-[-50%] left-[50%] translate-y-[-50%] aspect-square rounded-full -z-5 opacity-75" />
+      <div class="absolute outline outline-4 outline-base-100 w-[124%] top-[65%] translate-x-[-50%] left-[50%] translate-y-[-50%] aspect-square rounded-full -z-5 opacity-50" />
+      <div class="absolute outline outline-4 outline-base-100 w-[132%] top-[65%] translate-x-[-50%] left-[50%] translate-y-[-50%] aspect-square rounded-full -z-5 opacity-25" />
+      <div class="absolute outline outline-4 outline-base-100 w-[140%] top-[65%] translate-x-[-50%] left-[50%] translate-y-[-50%] aspect-square rounded-full -z-5 opacity-5" />
     </div>
   );
 }
@@ -77,7 +77,7 @@ export default function Home() {
         <div class="flex flex-col md:flex-row justify-center gap-12 lg:gap-16 my-24 px-8">
           <span class="badge badge-primary">ABOUT</span>
           <p class="font-bold text-2xl uppercase max-w-[640px]">
-            A passionate web developer with working experience with web and
+            A passionate developer that has experience working with web and
             mobile fullstack development within NodeJS ecosystem.
           </p>
         </div>
